@@ -45,35 +45,21 @@ class Karya extends CI_Controller {
 
 
    protected function _loadcss() {
-        $this->template->set_css('bootstrap.min.css');        
-        $this->template->set_css('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i', 'remote');        
-        // $this->template->set_css('https://fonts.googleapis.com/css?family=Open+Sans', 'remote');        
-        $this->template->set_css('font-awesome.min.css');
-        $this->template->set_css('orange.css');
-        $this->template->set_css('style.css');
-        $this->template->set_css('responsive.css'); 
-        $this->template->set_css('owl.carousel.css');
-        $this->template->set_css('owl.theme.css');
-        $this->template->set_css('flexslider.css'); 
-        $this->template->set_css('datepicker.css'); 
-        $this->template->set_css('magnific-popup.css');
-        $this->template->set_css('jquery.colorpanel.css');    
+        $this->template->set_css('bootstrap.css');           
+        $this->template->set_css('main.css');
+        $this->template->set_css('custom.css');
+        $this->template->set_css('http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800', 'remote');
+        $this->template->set_css('icomoon-social.css');
+        $this->template->set_css('font-awesome.min.css');     
     }
 
     protected function _loadjs() {   
-        $this->template->set_js('jquery.min.js','footer');
-        $this->template->set_js('jquery.colorpanel.js','footer'); 
-        $this->template->set_js('jquery.magnific-popup.min.js','footer');
+        $this->template->set_js('modernizr-2.6.2-respond-1.1.0.min.js');
+        $this->template->set_js('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js','footer', 'remote'); 
+        $this->template->set_js('jquery-1.9.1.min.js','footer');
         $this->template->set_js('bootstrap.min.js','footer');
-        $this->template->set_js('jquery.flexslider.js','footer'); 
-        $this->template->set_js('bootstrap-datepicker.js','footer'); 
-        $this->template->set_js('owl.carousel.min.js','footer');
-        $this->template->set_js('custom-navigation.js','footer'); 
-        $this->template->set_js('custom-flex.js','footer'); 
-        $this->template->set_js('custom-owl.js','footer'); 
-        $this->template->set_js('custom-date-picker.js','footer'); 
-        $this->template->set_js('custom-video.js','footer'); 
-        $this->template->set_js('popup-ad.js','footer'); 
+        $this->template->set_js('jquery.easing.min.js','footer');
+        $this->template->set_js('scrolling-nav.js','footer'); 
     }
 
 

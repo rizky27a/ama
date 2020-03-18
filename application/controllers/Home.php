@@ -56,6 +56,7 @@ class Home extends CI_Controller {
     protected function _loadjs() {   
         $this->template->set_js('modernizr-2.6.2-respond-1.1.0.min.js');
         $this->template->set_js('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js','footer', 'remote'); 
+        $this->template->set_js('jquery-1.9.1.min.js','footer');
         $this->template->set_js('bootstrap.min.js','footer');
         $this->template->set_js('jquery.easing.min.js','footer');
         $this->template->set_js('scrolling-nav.js','footer'); 

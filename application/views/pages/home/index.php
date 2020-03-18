@@ -40,7 +40,7 @@
         <div class="section section-breadcrumbs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <h1>Kegiatan</h1>
                     </div>
                 </div>
@@ -73,11 +73,11 @@
                     <div class="col-sm-6">
                         <div class="blog-post blog-single-post">
                             <div class="single-post-title">
-                                <h2><a href="<?= base_url('Karya/detail/'.$k['id_produk'])?>"><?php echo $k['nama_produk'] ?></a></h2>
+                                <h4><a href="<?= base_url('Karya/detail/'.$k['id_produk'])?>"><?php echo $k['nama_produk'] ?></a></h4>
                             </div>
 
                             <div class="single-post-image">
-                                <img src="img/blog/2.jpg" alt="Post Title">
+                                <img src="<?php echo base_url()?>assets/images/<?php echo $k['file_foto_produk']?>" alt="Post Title">
                             </div>
                             
                             <div class="single-post-info">
