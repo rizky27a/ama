@@ -17,6 +17,7 @@
                     <li <?php if ($active=='foto') { echo 'class="active"'; } ?>><a href="<?= base_url('Foto')?>">Foto</a></li>
                     <li <?php if ($active=='kontak') { echo 'class="active"'; } ?>><a href="<?= base_url('Contact')?>">Kontak</a></li>
                     <li <?php if ($active=='pendaftaran') { echo 'class="active"'; } ?>><a href="<?= base_url('C_Pendaftaran')?>">Daftar</a></li>
+                    <button><a href="<?= base_url('C_Login')?>">Login</a></li></button>
                 </ul>
             </div>
         </div>

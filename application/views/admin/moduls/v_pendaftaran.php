@@ -56,7 +56,6 @@
         <tr>
         	<th></th>
             <th>No.</th>
-            
 			<th>Nama</th>
             <th>Alamat</th>
             <th>Email</th>
