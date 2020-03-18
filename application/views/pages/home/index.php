@@ -35,8 +35,8 @@
         </a>
     </section>
 
-
-<section>
+<body>
+    <section>
         <div class="section section-breadcrumbs">
             <div class="container">
                 <div class="row">
@@ -99,9 +99,9 @@
             </div>
         </div>
 
-</section>
+    </section>
 
-<section>
+    <section>
 
         <div class="section">
             <div class="container">
@@ -118,5 +118,5 @@
                 </div>
             </div>
         </div>
-</section>
-
+    </section>
+</body>

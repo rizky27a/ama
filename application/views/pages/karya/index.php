@@ -2,12 +2,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                    	
+                    	<h1 class="page-title">Paket Wisata</h1>
                         <ul class="breadcrumb">
                             <li><a href="#">Beranda</a></li>
                             <li class="active">Paket Wisata</li>
                         </ul>
-                        <h1 class="page-title">Paket Wisata</h1>
+                        
                     </div><!-- end columns -->
                 </div><!-- end row -->
             </div><!-- end container -->
@@ -17,10 +17,10 @@
         	<div class="container">
         		<div class="row">
                     <div class="col-sm-12">
-                        <div class="page-heading text-center">
+                        <!-- <div class="page-heading text-center">
                             <h2>Paket Wisata</h2>
                             <hr class="heading-line">
-                        </div>
+                        </div> -->
                         <?php $a=0;
                         foreach ($produk as $k) {
                         $a++;

@@ -1,4 +1,17 @@
-
+<section class="section section-breadcrumbs" id="cover-about-us" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="page-title">Kontak</h1>
+                        <ul class="breadcrumb">
+                            <li><a href="#">Beranda</a></li>
+                            <li class="active">Kontak</li>
+                        </ul>
+                        
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end page-cover -->
 
 	<section class="innerpage-wrapper">
 
@@ -30,7 +43,7 @@
 
                                 <div class="row">
 
-                                    <div class="col-xs-12 col-sm-12 col-lg-10 col-lg-offset-1">
+                                    <div class="col-xs-12 col-sm-12 col-lg-10 col-lg-offset-1 text-center">
 
                                         <div class="page-heading">
 
