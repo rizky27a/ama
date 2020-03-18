@@ -12,28 +12,32 @@
             </div><!-- end container -->
         </section><!-- end page-cover -->
                 
-        
-<div class="section">
-    <div class="container">
-            <div class="row">
-            <?php foreach ($galeri as $k) {
+       
+        <div class="section">
+            <div class="container">
+                <div class="row">
+            
+            <ul class="grid cs-style-2">
+                  <?php foreach ($galeri as $k) {
                               
                                     ?>
-                <ul class="grid cs-style-2">
-                    <div class="col-md-4 col-sm-6">
-                        <figure>
-                            <img src="<?php echo base_url()?>assets/images/<?php echo $k['file_foto']?>" alt="gallery-img">
-                            <figcaption>
-                                <h3>Antique Batik Malang</h3>
-                                <span>Jacob Cummings</span>
-                                <a href="portfolio-item.html">Take a look</a>
-                            </figcaption>
-                        </figure>
-                    </div>  
+          
+                <div class="col-md-4 col-sm-6">
+                    <figure>
+                        <img src="<?php echo base_url()?>assets/images/<?php echo $k['file_foto']?>" alt="img04">
+                        <figcaption>
+                            <h3>Settings</h3>
+                            <span>Jacob Cummings</span>
+                            <a href="portfolio-item.html">Take a look</a>
+                        </figcaption>
+                    </figure>
+                </div>  
+                <?php } ?> 
+                
+            </ul>
 
-                </ul>
-                 <?php } ?>  
-            </div>
+                
+                </div>
                 
                 <ul class="pager">
                   <li><a href="#">Previous</a></li>
