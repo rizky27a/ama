@@ -165,17 +165,18 @@
   <div class="form-group">
   <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Username </label>
     <div class="col-sm-10">
-      <input type="text" id="username" name="username" placeholder= "Username" class="col-xs-10 col-sm-5" />
+      <input type="text" id="username" name="username" placeholder= "Username" class="col-xs-10 col-sm-5" required="" />
       <span class="help-block"></span>
     </div>
   </div>
   <div class="form-group">
   <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Password </label>
     <div class="col-sm-10">
-      <input type="text" id="password" name="password" placeholder= "Password" class="col-xs-10 col-sm-5" />
+      <input type="password" id="password" name="password" placeholder= "Password" class="col-xs-10 col-sm-5" required="" />
       <span class="help-block"></span>
     </div>
   </div>
+  
   <div class="col-md-offset-2 col-md-9">
         <button class="btn btn-info" type="submit" onClick="ajaxUpdate()" id="btnSave">
           <i class="ace-icon fa fa-check bigger-110"></i>
