@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_Pendaftaran extends CI_Controller {
 
-	private $_modul_name = "AMA";
+	private $_modul_name = "AMA Malang | Asosiasi Manajemen Indonesia Cabang Malang Raya";
 
 	function __construct()
     {

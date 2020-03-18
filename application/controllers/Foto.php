@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Foto extends CI_Controller {
 
-	private $_modul_name = "Web Tour";
+	private $_modul_name = "AMA Malang | Asosiasi Manajemen Indonesia Cabang Malang Raya";
 
 	function __construct()
     {
