@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2020 at 05:22 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Mar 18, 2020 at 10:31 AM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,7 +58,7 @@ CREATE TABLE `mainmenu` (
   `icon_class` varchar(50) NOT NULL,
   `link_menu` varchar(50) NOT NULL,
   `menu_akses` varchar(12) NOT NULL,
-  `entry_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `entry_date` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `entry_user` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -197,7 +197,7 @@ CREATE TABLE `submenu` (
   `icon_class` varchar(100) NOT NULL,
   `link_sub` varchar(50) NOT NULL,
   `sub_akses` varchar(12) NOT NULL,
-  `entry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `entry_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `entry_user` varchar(20) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -222,11 +222,11 @@ CREATE TABLE `tab_akses_mainmenu` (
   `id` int(11) NOT NULL,
   `id_menu` int(11) NOT NULL,
   `id_level` int(11) NOT NULL,
-  `c` int(11) DEFAULT '0',
-  `r` int(11) DEFAULT '0',
-  `u` int(11) DEFAULT '0',
-  `d` int(11) DEFAULT '0',
-  `entry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `c` int(11) DEFAULT 0,
+  `r` int(11) DEFAULT 0,
+  `u` int(11) DEFAULT 0,
+  `d` int(11) DEFAULT 0,
+  `entry_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `entry_user` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -257,11 +257,11 @@ CREATE TABLE `tab_akses_submenu` (
   `id` int(11) NOT NULL,
   `id_sub_menu` int(11) NOT NULL,
   `id_level` int(11) NOT NULL,
-  `c` int(11) DEFAULT '0',
-  `r` int(11) DEFAULT '0',
-  `u` int(11) DEFAULT '0',
-  `d` int(11) DEFAULT '0',
-  `entry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `c` int(11) DEFAULT 0,
+  `r` int(11) DEFAULT 0,
+  `u` int(11) DEFAULT 0,
+  `d` int(11) DEFAULT 0,
+  `entry_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `entry_user` varchar(30) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -374,7 +374,8 @@ INSERT INTO `tb_galeri` (`id_foto`, `file_foto`) VALUES
 (1, 'Family-Tours-11554356735.jpg'),
 (2, 'Family-Tours-21554357161.jpg'),
 (3, 'Family-Tours-31554357161.jpg'),
-(4, 'Family-Tours-41554357161.jpg');
+(4, 'Family-Tours-41554357161.jpg'),
+(45, 'produk_1584521737.jpg');
 
 -- --------------------------------------------------------
 
@@ -421,15 +422,19 @@ CREATE TABLE `tb_pendaftaran` (
   `telepon_kantor` int(13) NOT NULL,
   `bidang_usaha` text NOT NULL,
   `jabatan` varchar(20) NOT NULL,
-  `foto` text NOT NULL
+  `foto` text NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `status` varchar(11) NOT NULL DEFAULT 'Menunggu'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_pendaftaran`
 --
 
-INSERT INTO `tb_pendaftaran` (`id_user`, `nama_lengkap`, `tempat`, `tanggal_lahir`, `jenis_kel`, `alamat`, `alamat_email`, `telepon`, `no_hp`, `pend_terakhir`, `pekerjaan`, `perusahaan`, `alamat_kantor`, `telepon_kantor`, `bidang_usaha`, `jabatan`, `foto`) VALUES
-(1, 'John ', 'Malang', '1980-09-01', 'Perempuan', 'Jl. Danau Sentani', 'jhon@gmail.com', 341367282, 834362563, 'S1', 'Pemilik Perusahaan', 'DD', 'Jl. danau', 341764724, 'Bisnis', 'Direktur', 'John-1.jpg');
+INSERT INTO `tb_pendaftaran` (`id_user`, `nama_lengkap`, `tempat`, `tanggal_lahir`, `jenis_kel`, `alamat`, `alamat_email`, `telepon`, `no_hp`, `pend_terakhir`, `pekerjaan`, `perusahaan`, `alamat_kantor`, `telepon_kantor`, `bidang_usaha`, `jabatan`, `foto`, `username`, `password`, `status`) VALUES
+(1, 'John ', 'Malang', '1980-09-01', 'Perempuan', 'Jl. Danau Sentani', 'jhon@gmail.com', 341367282, 834362563, 'S1', 'Pemilik Perusahaan', 'DD', 'Jl. danau', 341764724, 'Bisnis', 'Direktur', 'John-1.jpg', '', '', 'Menunggu'),
+(3, 'Najmi Shofi', 'jember', '1998-01-10', 'Wanita', 'Jember', 'najmishofi0110@gmail.com', 2147483647, 2147483647, 'SMA', 'uwu', 'uwuwu', 'uwuwuwu', 110, 'uwwwwwwuu', 'uwuuuuu', '', 'najmishofi', 'uwuwu', 'Menunggu');
 
 -- --------------------------------------------------------
 
@@ -647,7 +652,7 @@ ALTER TABLE `tb_beranda_`
 -- AUTO_INCREMENT for table `tb_galeri`
 --
 ALTER TABLE `tb_galeri`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `tb_kontak`
@@ -659,7 +664,7 @@ ALTER TABLE `tb_kontak`
 -- AUTO_INCREMENT for table `tb_pendaftaran`
 --
 ALTER TABLE `tb_pendaftaran`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_produk`
