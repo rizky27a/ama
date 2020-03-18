@@ -1,4 +1,4 @@
- <section class="page-cover" id="cover-about-us">
+ <section class="section section-breadcrumbs" id="cover-about-us">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
