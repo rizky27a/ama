@@ -73,14 +73,14 @@
   <div class="form-group">
   <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Telepon </label>
     <div class="col-sm-10">
-      <input type="number" id="telepon" name="telepon" placeholder= "Telepon" class="col-xs-10 col-sm-5" />
+      <input type="number" id="telepon" name="telepon" placeholder= "Telepon" min="0" class="col-xs-10 col-sm-5" />
       <span class="help-block"></span>
     </div>
   </div>
   <div class="form-group">
   <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Nomor HP </label>
     <div class="col-sm-10">
-      <input type="number" id="no_hp" name="no_hp" placeholder= "Nomor HP" class="col-xs-10 col-sm-5" required/>
+      <input type="number" id="no_hp" name="no_hp" placeholder= "Nomor HP" min="0" class="col-xs-10 col-sm-5" required/>
       <span class="help-block"></span>
     </div>
   </div>
@@ -115,7 +115,7 @@
   <div class="form-group">
   <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> Telepon Kantor </label>
     <div class="col-sm-10">
-      <input type="number" id="telepon_kantor" name="telepon_kantor" placeholder= "Telepon Kantor" class="col-xs-10 col-sm-5" />
+      <input type="number" id="telepon_kantor" name="telepon_kantor" min="0" placeholder= "Telepon Kantor" class="col-xs-10 col-sm-5" />
       <span class="help-block"></span>
     </div>
   </div>
